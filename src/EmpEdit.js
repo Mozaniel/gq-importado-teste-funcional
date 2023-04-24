@@ -5,7 +5,7 @@ const EmpEdit = () => {
     const { empid } = useParams();
     //const [empdata,empdatachange] = useState({});
     useEffect(() => {
-        fetch("http://localhost:8000/lista/" + empid).then((res) => {
+        fetch("http://localhost:8000/list/" + empid).then((res) => {
             return res.json();    
         }).then((resp) => {
             idchange(resp.id);
@@ -46,7 +46,7 @@ const EmpEdit = () => {
         e.preventDefault();
         const empdata={id,dia,item,codigo,lote,modelo,qtdinsp,qtdng,qtdret,qtdok,status,usuario,ativo};   
 
-        fetch("http://localhost:8000/lista/"+empid,{
+        fetch("http://localhost:8000/list/"+empid,{
             method:"PUT",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(empdata)
