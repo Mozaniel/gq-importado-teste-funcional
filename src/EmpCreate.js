@@ -23,7 +23,7 @@ const EmpCreate = () => {
         e.preventDefault();
         const empdata={dia,item,codigo,lote,modelo,qtdinsp,qtdng,qtdret,qtdok,status,usuario,ativo};   
 
-        fetch("http://localhost:8000/lista",{
+        fetch("https://gq-importado-teste-funcional-3k1gzxil9-mozaniel.vercel.app/",{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(empdata)
