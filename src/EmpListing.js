@@ -10,7 +10,7 @@ const EmpListing = () => {
     }
     const Removefunction=(id)=>{
         if (window.confirm('Você tem certeza de que deseja excluir a informação ?')) {
-            fetch("http://localhost:8000/lista/" + id,{
+            fetch("https://gq-importado-teste-funcional-3k1gzxil9-mozaniel.vercel.app/" + id,{
             method:"DELETE"
         }).then((res)=>{
             alert('Informação excluída com sucesso !')
@@ -22,7 +22,7 @@ const EmpListing = () => {
     }
 
     useEffect(() =>  {
-        fetch("http://localhost:8000/lista").then((res) => {
+        fetch("https://gq-importado-teste-funcional-3k1gzxil9-mozaniel.vercel.app/").then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
