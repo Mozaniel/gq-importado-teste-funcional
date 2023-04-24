@@ -15,7 +15,7 @@ const EmpCreate = () => {
     const[status,statuschange]=useState("");
     const[usuario,usuariochange]=useState("");
     const[ativo,ativochange]=useState(true);
-    const[validation,valchange]=useState(true);
+    const[validation,valchange]=useState(false);
 
     const navigate=useNavigate();
 
@@ -126,7 +126,7 @@ const EmpCreate = () => {
                                         <div className="form-check">
                                         <input checked={ativo} onChange={e=>ativochange(e.target.checked)} type="checkbox" className="form-check-input"></input>
                                             <label className="form-check-label">Ativo</label>
-                                        </div>
+                                            </div>
                                         </div>
                                         <div className="col-lg-12">
                                         <div className="form-group">
