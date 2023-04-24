@@ -28,7 +28,7 @@ const EmpCreate = () => {
             headers:{"content-type":"application/json"},
             body:JSON.stringify(empdata)
         }).then((res)=>{
-            alert('Salvo com sucesso !')
+            alert('Informação salva com sucesso !')
             navigate('/');
         }).catch((err)=>{
             console.log(err.message);
