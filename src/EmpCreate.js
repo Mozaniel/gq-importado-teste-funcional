@@ -15,7 +15,7 @@ const EmpCreate = () => {
     const[status,statuschange]=useState("");
     const[usuario,usuariochange]=useState("");
     const[ativo,ativochange]=useState(true);
-    const[validation,valchange]=useState(false);
+    const[validation,valchange]=useState(true);
 
     const navigate=useNavigate();
 
@@ -23,7 +23,7 @@ const EmpCreate = () => {
         e.preventDefault();
         const empdata={dia,item,codigo,lote,modelo,qtdinsp,qtdng,qtdret,qtdok,status,usuario,ativo};   
 
-        fetch("http://localhost:8000/lista/",{
+        fetch("http://localhost:8000/list/",{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(empdata)
