@@ -5,7 +5,7 @@ const EmpEdit = () => {
     const { empid } = useParams();
     //const [empdata,empdatachange] = useState({});
     useEffect(() => {
-        fetch("https://gq-importado-teste-funcional-3k1gzxil9-mozaniel.vercel.app/" + empid).then((res) => {
+        fetch("http://localhost:8000/lista/" + empid).then((res) => {
             return res.json();    
         }).then((resp) => {
             idchange(resp.id);
@@ -46,7 +46,7 @@ const EmpEdit = () => {
         e.preventDefault();
         const empdata={id,dia,item,codigo,lote,modelo,qtdinsp,qtdng,qtdret,qtdok,status,usuario,ativo};   
 
-        fetch("https://gq-importado-teste-funcional-3k1gzxil9-mozaniel.vercel.app/"+empid,{
+        fetch("http://localhost:8000/lista/"+empid,{
             method:"PUT",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(empdata)
